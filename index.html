@@ -14,49 +14,52 @@
     </header>
     <section id="Child Profile">
         <h1 id="childsName">Critter</h1>
-        <h2></h2>
-        <ol id="primary">
-            <li>age</li>
-            <li>weight</li>
+        <h2>the vitals</h2>
+        <ol id="primary"><!--create a db to store history-->
+            <input type="number" name="Age" id="age">
+            <li id="ageFromInput">7 years</li><!--figure out how to base age off of dob-->
+            <li>45 lbs</li><!--add kilogram conversion-->
+            <input type="number" name="weight" id="weight">
             <input type="checkbox" name="dob" id="">
             
         </ol>
-        <ol id="last numbers">
-            <li id="tempature"></li>
-            <li id="meal"></li>
-            <li id="hydration"></li>
+        <ol id="lastNumbers">
+            <li id="tempature">99 degrees f<span>safe range<!--retrive from data base using current stats--></span></li>
+            <!--add f to c conversion-->
+            <li id="meal">cup of mac n cheese</li>
+            <li id="hydration">1 liter of gatorade</li>
         </ol>
     </section>
     <section id="symptons">
         <ol>
-            <li id="nose"></li>
-            <li id="tummy"></li>
-            <li id="bottom"></li>
-            <li id="appitite"></li>
-            <li id="eyes"></li>
-            <li id="skin"></li>
-            <li id="fever"></li>
+            <li id="nose">stuffy</li>
+            <li id="tummy">squirmy</li>
+            <li id="bottom">can't trust a fart</li>
+            <li id="appitite">I'm not really hungry</li>
+            <li id="eyes">My eyes are itchy</li>
+            <li id="skin">My skin is clamy</li>
+            <li id="fever">yes but brought down with <span id="medicineFromMedNDoseage">tylenol</span></li>
             <li id="sleep"></li>
         </ol>
     </section>
-    <section id="medicine">
-        <h1 id="medicine name"> over the counter or perscribition</h1>
-        <h2 id="dosage">
-            <span id="dosage time"></span><span id="dose administrator"></span>
+    <section id="medicine"><!--build api to fetch med info and dosage-->
+        <h1 id="medicine name">Tylenol <span id="perscriptionOrNah">over counter</span></h1><!--send info to #fever sympton section-->
+        <h2 id="dosage"> 5ml<!--metric or imperal-->
+            <span id="dosage time">11:22 AM<!--add 12 or 24 hour--></span><span id="dose administrator">Dad</span>
         </h2>
-        <section id="numbers at dose time"> <a href="last numbers"></a></section>
+        <section id="numbers at dose time">tempature at dose <a href="lastNumbers"></a></section>
         <h4 id="efective">based on diffrence between numbers at first dose and current numbers</h4>
-        <h3 id="next dose time"></h3>
+        <h3 id="next dose time"></h3><!--retrive from medicine database-->
 
     </section>
-    <section id="dr.followUp">
-        <h2>Dr.Name</h2>
-        <h1>doctor diagnosis</h1>
+    <section id="drFollowUp">
+        <h2 id="DrName">Dr. Jennifer Harris</h2>
+        <h1 id="drDiagnoses">common cold</h1>
         
-        <span>last visit</span>
-        <span>next visit</span>
+        <span id="lastVisitLocation">Seen at urgent care on<span>08/04/2022</span></span>
+        <span id="nextVisit">Follow up with PCP on <span>08/07/2022</span>
         <h3>er , urgent, or primary visit required</h3>
-        <h4>called dr</h4>
+        <h4>called dr or nurses line</h4>
     </section>
 
 </body>
